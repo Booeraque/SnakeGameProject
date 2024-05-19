@@ -24,6 +24,7 @@ function updateGameView() {
         .then(gameState => {
             // Check if the game is over
             if (gameState.game_over) {
+                console.log('Game over!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
                 // Stop updating the game view
                 if (gameIntervalId !== null) {
                     clearInterval(gameIntervalId);
@@ -39,7 +40,6 @@ function updateGameView() {
 
                 // Add event listeners to the buttons
                 document.getElementById('new-game-button').addEventListener('click', startGame);
-                document.getElementById('save-game-button').addEventListener('click', saveGame);
             } else {
                 // Clear the game board
                 const gameBoard = document.getElementById('game-board');

@@ -1,5 +1,3 @@
-import threading
-
 from flask import Flask, render_template, request, jsonify
 
 from SourceCode.Snake import Snake
